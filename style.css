@@ -7,13 +7,16 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
+.display{
+    display: flex;
+    justify-content: flex-end;
+}
 input {
     background-color: gray;
     border: none;
     /* padding: 20px; */
     padding: 20px 0px;
-    width: 100%;
+    width: 50%
 }
 input:focus{
     background-color: gray;
@@ -33,9 +36,16 @@ button {
 .container{
     background-color: black;
     display:flex;
+    /* align-items: center; */
     justify-content: flex-start;
     flex-direction: column;
     max-width: 75%;
+}
+
+.calculator{
+    padding: 20px;
+    cursor: pointer;
+    /* border-radius: 20%; */
 }
 
 
