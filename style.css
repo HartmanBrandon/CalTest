@@ -23,7 +23,6 @@ input:focus{
 
 }
 button {
-
     /*TODO: get the buttons a perfect circle*/
     border-radius: 50%;
     border: none;

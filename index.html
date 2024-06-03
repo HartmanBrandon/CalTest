@@ -16,33 +16,33 @@
         </div>
         <div class="calculator">
             <div class="child">
-                <button class="keys-btn">AC</button>
-                <button class="keys-btn">+/-</button>
-                <button class="keys-btn">%</button>
-                <button class="operator-btn">/</button>
+                <button class="keys-btn" onclick="reset()">AC</button>
+                <button class="keys-btn" onclick="handleOperatorClick('+/-')">+/-</button>
+                <button class="keys-btn" onclick="handleOperatorClick('%')">%</button>
+                <button class="operator-btn" onclick="handleOperatorClick('/')">/</button>
             </div>
             <div class="child">
-                <button class="number-btn" onclick="populate('7')">7</button>
-                <button class="number-btn" onclick="populate('8')">8</button>
-                <button class="number-btn" onclick="populate('9')">9</button>
-                <button class="operator-btn" onclick="populate('*')">*</button>
+                <button class="number-btn" onclick="handleOnClick('7')">7</button>
+                <button class="number-btn" onclick="handleOnClick('8')">8</button>
+                <button class="number-btn" onclick="handleOnClick('9')">9</button>
+                <button class="operator-btn" onclick="handleOperatorClick('*')">*</button>
             </div>
             <div class="child">
-                <button class="number-btn" onclick="populate('4')">4</button>
-                <button class="number-btn" onclick="populate('5')">5</button>
-                <button class="number-btn" onclick="populate('6')">6</button>
-                <button class="operator-btn" onclick="populate('-')">-</button>
+                <button class="number-btn" onclick="handleOnClick('4')">4</button>
+                <button class="number-btn" onclick="handleOnClick('5')">5</button>
+                <button class="number-btn" onclick="handleOnClick('6')">6</button>
+                <button class="operator-btn" onclick="handleOperatorClick('-')">-</button>
             </div>
             <div class="child">
-                <button class="number-btn" onclick="populate('1')">1</button>
-                <button class="number-btn" onclick="populate('2')">2</button>
-                <button class="number-btn" onclick="populate('3')">3</button>
-                <button class="operator-btn" onclick="populate('+')">+</button>
+                <button class="number-btn" onclick="handleOnClick('1')">1</button>
+                <button class="number-btn" onclick="handleOnClick('2')">2</button>
+                <button class="number-btn" onclick="handleOnClick('3')">3</button>
+                <button class="operator-btn" onclick="handleOperatorClick('+')">+</button>
             </div>
             <div class="child">
-                <button class="number-btn" onclick="populate('0')">0</button>
-                <button class="operator-btn" onclick="populate('.')">.</button>
-                <button class="operator-btn" onclick="populate('=')">=</button>
+                <button class="number-btn" onclick="handleOnClick('0')">0</button>
+                <button class="operator-btn" onclick="handleOnClick('.')">.</button>
+                <button class="operator-btn" onclick="operate()">=</button>
             </div>
         </div>
     </div>

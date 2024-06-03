@@ -23,22 +23,29 @@ function divide(firstNumber, secondNumber) {
         return 0;
     }
     return firstNumber / secondNumber;
-
 }
 
-function operate(operate, firstNumber, secondNumber){
-    switch (operate) {
+function operate(){
+    let firstNumber = parseInt(sessionStorage.getItem("firstNumber"));
+    let secondNumber = parseInt(sessionStorage.getItem("secondNumber"));
+    let operator = sessionStorage.getItem("operator");
+    let result;
+    switch (operator) {
         case "+":
-            return add(firstNumber, secondNumber);
+            result = add(firstNumber, secondNumber);
+            break;
         case "-":
-            return subtract(firstNumber, secondNumber);
+            result = subtract(firstNumber, secondNumber);
+            break;
         case "*":
-            return multiply(firstNumber, secondNumber);
+            result = multiply(firstNumber, secondNumber);
         case "/":
-            return divide(firstNumber, secondNumber);
+            result = divide(firstNumber, secondNumber);
         default:
+            result = 0;
             break;
     }
+    populate(result);
 }
 
 function populate(displayValue){
@@ -47,4 +54,29 @@ function populate(displayValue){
     // console.log(displayValue);
     document.getElementById("display-input").setAttribute("value", displayValue.toString());
 
+}
+
+function storeNumber(num){
+    let operator = sessionStorage.getItem("operator");
+    if(operator){
+        sessionStorage.setItem("secondNumber", num);
+    } 
+    else {
+        sessionStorage.setItem("firstNumber", num);
+    }
+}
+
+function handleOnClick(num){
+    populate(num);
+    storeNumber(num);
+}
+
+function handleOperatorClick(operator){
+    populate(operator);
+    sessionStorage.setItem("operator", operator);
+}
+
+function reset(){
+    sessionStorage.clear();
+    populate(0);
 }
